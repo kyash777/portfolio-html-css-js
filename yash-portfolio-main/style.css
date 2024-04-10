@@ -1,0 +1,397 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+.navbar{
+    z-index: 1;
+    position: fixed;
+    height: 64px;
+    top: 0;
+    left: 0;
+    width:100dvw;
+    display: flex;
+    flex-direction: row;
+    gap:5dvw;
+    justify-content: center;
+    padding:2% 0;
+    background-color: white;
+    color:black;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    align-items: center;
+}
+.nav-link {
+    color: black; /* Default color */
+    text-decoration: none; /* Default no underline */
+}
+
+
+.navbar a{
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.navbar a:hover{
+    transform: scale(1.1);
+
+}
+
+/* whenver something is active */
+.active {
+    color:#2196F3;
+    text-decoration: underline;
+}
+
+/* whenever we want to hide or make visible anything something */
+.hidden{
+    display: none;
+}
+.visible{
+    display: flex;
+}
+/* about section */
+.about{
+    /* display: flex; */
+    margin-top: 64px;
+    height: 100vh;
+    padding: 1rem;
+}
+.about .about-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    @media (min-width: 768px) {
+        flex-direction: row;
+      }
+}
+.about .about-content .about-img{
+    width: 30dvw;
+    margin: auto;
+    @media (max-width: 768px) {
+        width: 40dvw;
+        height:40dvw;
+      }
+      @media (max-width: 566px) {
+        width: 60dvw;
+        height:60dvw;
+      }
+}
+.about .about-content .about-img img{
+    height: 30dvw;
+    width: 30dvw;
+    margin:0 auto;
+    border-radius:9999px;
+    overflow: hidden;
+    @media (max-width: 768px) {
+        width: 40dvw;
+        height:40dvw;
+      }
+      @media (max-width: 566px) {
+        width: 60dvw;
+        height:60dvw;
+      }
+}
+.about .about-text{
+    margin: 0px auto 0px auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    @media (max-width: 768px) {
+      width: 100%; /* Change to 100% width for smaller screens */
+      text-align: center; /* Center-align text when screen size decreases */
+      margin-bottom:20px;
+      height:60vh;
+    }
+}
+.about .about-text .styled-hello{
+    color: #878787;
+    font-size: 30px;
+}
+.about .about-text .styled-name{
+    font-size: 40px;
+  font-weight: 600;
+  @media (max-width: 768px) {
+    font-size:30px;
+  }
+
+}
+.about .about-text .first-name{
+    font-size: 40px;
+    color: blue;
+    font-weight: 600;
+    @media (max-width: 768px) {
+      font-size:30px;
+    }
+}
+.about .about-text .styled-role{
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    @media (max-width: 768px) {
+      font-size:30px;
+    }
+}
+.about .about-text .styled-intro{
+    font-size: 20px;
+    color: #878787;
+    margin-bottom:20px;
+    @media (max-width: 768px) {
+      font-size:14px;
+    }
+}
+.about .about-text .icon-container{
+    display: flex;
+  justify-content: space-between;
+  width: 40%;
+@media (max-width: 768px) {
+    width: 60%; /* Change to 100% width for smaller screens */
+    text-align: center; /* Center-align text when screen size decreases */
+      justify-content: space-around;
+      margin-left: 20%;
+  }
+}
+.about .about-text .icon-container i{
+    font-size: 45px;
+    color: black;
+}
+
+
+/* skill section */
+.skill{
+  
+    width: 80%;
+    text-align: center;
+    margin:auto;
+    margin-top: 100px;
+}
+.skills  .skill-heading{
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom:30px;
+    color:#2196F3;
+}
+.skills .skill-type{
+    margin-bottom:30px;
+    width:40%;
+    margin: 0px auto 30px auto;
+    justify-content: space-around;
+    display:flex;
+    font-size: 11px;
+    @media (max-width: 768px) {
+        width:100%;
+       
+      }
+}
+.skills .skill-content{
+    justify-content: center;
+}
+.skills .skill-type .technical-heading, .skills .skill-type .soft-heading{
+    cursor: pointer;
+    color:#2196F3;
+    @media (max-width: 768px) {
+        font-size:22px;
+       
+      }
+}
+.skills .radial-bars {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+   
+}
+ 
+.skills .radial-bars .radial-bar{
+    width: 50%;
+    height: 170px;
+    margin-bottom: 10px;
+    position: relative;
+    @media (min-width: 768px) {
+        width: 33%;
+       
+      }
+}
+.skills .radial-bars .radial-bar svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-90deg);
+    width: 120px;
+    height: 160px;
+}
+.skills .radial-bars .radial-bar .progress-bar{
+    stroke-width: 10;
+    stop-color: black;
+    fill: transparent;
+    stroke: #d6d6d6;
+    stroke-linecap: round;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    animation: animate-bar 1s linear forwards;
+}
+
+@keyframes animate-bar{
+    100%{
+        stroke-dashoffset: -1;
+    }
+}
+
+.path{
+    stroke-width: 10;
+    stroke: #3e98c7;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+}
+
+.path-1{animation: animate-path-1 1s 1s linear forwards}
+.path-2{animation: animate-path-2 1s 1s linear forwards}
+.path-3{animation: animate-path-3 1s 1s linear forwards}
+.path-4{animation: animate-path-4 1s 1s linear forwards}
+
+@keyframes animate-path-1{
+    100%{
+        stroke-dashoffset: 125;
+    }
+}
+@keyframes animate-path-2{
+    100%{
+        stroke-dashoffset: 175;
+    }
+}
+
+
+@keyframes animate-path-3{
+    100%{
+        stroke-dashoffset:175;
+    }
+}
+
+
+@keyframes animate-path-4{
+    100%{
+        stroke-dashoffset: 75;
+    }
+}
+
+.skills .radial-bar .percentage{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+.radial-bar .text{
+    width: 90%;
+    /* margin: auto; */
+    position: absolute;
+    text-align: center;
+    left: 5%;
+    bottom: -5px;
+    transform: translateX(-50%,-50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+@keyframes showText{
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+/* *********************project section *****************************************/
+
+.projects{
+    width:95%;
+/* display:flex; */
+align-items:center;
+justify-content:space-evenly;
+/* height:100vh; */
+margin:84px auto 0px auto;
+gap: 2rem;
+flex-wrap: wrap; 
+padding: 1rem;
+@media (max-width: 566px) {
+  flex-direction: column; 
+   gap: 0;
+  }
+  @media (max-width: 768px) {
+    flex-direction: row;
+    gap: 0;
+     
+    }
+  
+}
+
+.projects .project-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 1rem 1.25rem;
+    transition: all 0.5s;
+    height: 72dvh;
+    @media (min-width: 880px) {
+        flex-basis: 35%;
+        gap: 10px;
+        }
+        @media (max-width: 768px) {
+            height: 40dvh;
+            flex-basis: 80%;
+            }
+  
+}
+.projects .project-container:hover{
+    transform: translateY(-10px);
+}
+.projects .project-container .image-container{
+    width:50%;
+    margin:auto;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #f2f2f2, #e0e0e0); 
+}
+.projects .project-container .image-container img{
+    height: 100%;
+    width: 100%;
+}
+
+.projects .project-container .project-heading{
+    font-size:30px;
+    text-align:center;
+    margin-top:10px;
+    @media (max-width: 768px) {
+        font-size:20px
+    }
+}
+
+.projects .project-container .project-desc{
+    font-size:16px;
+    text-align:center;
+    color:#878787;
+    padding:0 40px;
+    font-weight: 500;
+    @media (max-width: 768px) {
+        font-size:12px;
+        padding:0px
+    }
+}
+.projects .project-container .project-icons{
+    text-align:center;
+    margin-top:10px;
+    @media (max-width: 768px) {
+        margin-bottom:30px;
+    }
+}
